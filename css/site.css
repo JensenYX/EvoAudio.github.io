@@ -382,11 +382,12 @@ button {
 }
 .family-rail button {
   flex: 0 0 auto;
-  padding: 0.4em 0.95em;
+  padding: 0.5em 1.1em;
   border-radius: 9999px;
   border: 1px solid var(--rule);
   color: var(--ink-soft);
-  font-size: 0.88rem;
+  font-size: 0.98rem;
+  font-weight: 500;
   font-family: var(--font-display);
   background: var(--bg);
   white-space: nowrap;
@@ -510,9 +511,14 @@ button {
   height: 20px;
   display: flex;
   align-items: center;
-  cursor: pointer;
+  /* A grab cursor is the affordance that tells people the thumb moves; a
+     plain pointer reads as "click a stop" and the drag goes unnoticed. */
+  cursor: grab;
   touch-action: none;
   user-select: none;
+}
+.slider__rail:active {
+  cursor: grabbing;
 }
 .slider__rail:focus-visible {
   outline: 2px solid var(--brand-cyan);
