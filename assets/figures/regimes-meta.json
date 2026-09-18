@@ -1,0 +1,27 @@
+{
+  "source": "paper main results table",
+  "models": [
+    "Qwen2.5-Omni-7B",
+    "Audio Flamingo 3 (7B)",
+    "Kimi-Audio-7B-Instruct"
+  ],
+  "methods": [
+    "Base",
+    "Static-profile GRPO",
+    "Pooled GRPO",
+    "EvoAudio (SFT)",
+    "EvoAudio (GRPO)"
+  ],
+  "axes": [
+    "MMSU: Percep.",
+    "MMSU: Reason.",
+    "MMAU-Pro: Speech",
+    "MMAU-Pro: Sound",
+    "MMAU-Pro: Music",
+    "MMAR: Signal",
+    "MMAR: Percep.",
+    "MMAR: Seman.",
+    "MMAR: Culture"
+  ],
+  "note": "per-spoke radial windows; radius is relative within a spoke"
+}

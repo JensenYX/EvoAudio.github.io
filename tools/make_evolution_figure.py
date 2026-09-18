@@ -95,11 +95,13 @@ def style_axes(ax, title: str, *, show_xlabel: bool, show_ylabel: bool) -> None:
 
 def draw(data: dict, layout: str) -> Path:
     if layout == "wide":
-        fig, axes = plt.subplots(2, 2, figsize=(10.6, 7.4))
-        flat = axes.ravel()
-        legend_y = 0.965
-        top = 0.885
-        hspace, wspace = 0.30, 0.20
+        # One row rather than 2x2: four panels across the page column read as a
+        # single progression and keep the section from dominating the page.
+        fig, axes = plt.subplots(1, 4, figsize=(14.6, 3.9))
+        flat = axes
+        legend_y = 0.995
+        top = 0.775
+        hspace, wspace = 0.30, 0.26
     else:
         fig, axes = plt.subplots(4, 1, figsize=(5.6, 13.6))
         flat = axes
@@ -131,9 +133,14 @@ def draw(data: dict, layout: str) -> Path:
                 clip_on=True,
             )
         if layout == "wide":
-            style_axes(ax, title, show_xlabel=index >= 2, show_ylabel=index % 2 == 0)
+            # In one row the x-axis caption is shared below all four panels,
+            # and only the leftmost needs the y-axis caption.
+            style_axes(ax, title, show_xlabel=False, show_ylabel=index == 0)
         else:
             style_axes(ax, title, show_xlabel=index == 3, show_ylabel=True)
+
+    if layout == "wide":
+        fig.supxlabel("Evolution attempt", fontsize=11, color=INK_SOFT, y=0.035)
 
     handles = [
         Line2D(
@@ -161,10 +168,10 @@ def draw(data: dict, layout: str) -> Path:
         labelcolor=INK,
     )
     fig.subplots_adjust(
-        left=0.085 if layout == "wide" else 0.15,
-        right=0.985,
+        left=0.05 if layout == "wide" else 0.15,
+        right=0.99,
         top=top,
-        bottom=0.075 if layout == "wide" else 0.045,
+        bottom=0.175 if layout == "wide" else 0.045,
         hspace=hspace,
         wspace=wspace,
     )

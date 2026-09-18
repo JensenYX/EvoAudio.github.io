@@ -305,18 +305,19 @@ button {
   color: var(--ink-soft);
 }
 
-/* The evolution chart ships in two aspect ratios; CSS picks one. */
-.figure--evolution .is-wide {
+/* Charts that ship in two aspect ratios; CSS picks one. A single wide SVG
+   scaled to phone width leaves the axis labels unreadable. */
+.figure--responsive .is-wide {
   display: block;
 }
-.figure--evolution .is-tall {
+.figure--responsive .is-tall {
   display: none;
 }
 @media (max-width: 720px) {
-  .figure--evolution .is-wide {
+  .figure--responsive .is-wide {
     display: none;
   }
-  .figure--evolution .is-tall {
+  .figure--responsive .is-tall {
     display: block;
   }
 }

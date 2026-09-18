@@ -152,7 +152,7 @@
             over rounds rather than arriving all at once.
           </p>
         </div>
-        <figure class="figure figure--evolution">
+        <figure class="figure figure--evolution figure--responsive">
           <img
             class="is-wide"
             src="assets/figures/evolution-wide.svg"
@@ -171,6 +171,35 @@
             structure are what the tools control and what MMSU asks about, while
             the semantic and cultural reasoning of MMAR lies mostly beyond what
             they can build.
+          </figcaption>
+        </figure>
+
+        <figure class="figure figure--regimes figure--responsive">
+          <img
+            class="is-wide"
+            src="assets/figures/regimes-wide.svg"
+            alt="Three radar charts, one per backbone, comparing five training regimes across nine benchmark axes."
+          />
+          <img
+            class="is-tall"
+            src="assets/figures/regimes-tall.svg"
+            alt="Three radar charts, one per backbone, comparing five training regimes across nine benchmark axes."
+          />
+          <figcaption>
+            <strong>The gain comes from the loop, not simply from more
+            training.</strong>
+            Each radar holds one backbone fixed and compares five regimes on the
+            same nine benchmark axes. Every regime after Base receives an
+            identical optimization budget and identical training settings, and
+            they differ only in where their questions come from: Static-profile
+            GRPO keeps the round schedule but reads its skill profile, quotas
+            and difficulty once from the base model; Pooled GRPO makes a single
+            pass over the union of all rounds' curricula; EvoAudio rebuilds the
+            curriculum against the current solver every round. The EvoAudio
+            (GRPO) polygon sits outside the others on almost every axis of all
+            three backbones. Each spoke is scaled to its own range so the few
+            points separating the regimes stay visible, which means radius is
+            comparable along a spoke but not between spokes.
           </figcaption>
         </figure>
       </div>
