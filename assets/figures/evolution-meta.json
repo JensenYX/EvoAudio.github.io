@@ -1,0 +1,25 @@
+{
+  "metric": "Unweighted mean of raw accuracy (%) on full MMSU, valid-gold closed/non-spatial MMAU-Pro, and full MMAR",
+  "checkpoint_policy": "Attempt 0 is Base; each attempt 1--13 selects the higher three-benchmark mean between checkpoint-32 and checkpoint-64, with checkpoint-32 winning ties and no promotion filtering",
+  "models": [
+    "Qwen2.5-Omni",
+    "MiMo-Audio",
+    "Kimi-Audio",
+    "MiniCPM-o 4.5",
+    "Audio Flamingo 3"
+  ],
+  "panels": [
+    "Three-benchmark average",
+    "MMSU",
+    "MMAU-Pro",
+    "MMAR"
+  ],
+  "attempts": 14,
+  "colors": {
+    "Qwen2.5-Omni": "#0b57d0",
+    "MiMo-Audio": "#d1495b",
+    "Kimi-Audio": "#0f8a72",
+    "MiniCPM-o 4.5": "#7d5ba6",
+    "Audio Flamingo 3": "#d98014"
+  }
+}

@@ -1,0 +1,717 @@
+{
+  "input": 4284,
+  "kept": 2013,
+  "gate_outcomes": {
+    "ok": 2013,
+    "answer_contradicted_by_report": 1717,
+    "heard_a_decoy": 251,
+    "report_silent_on_the_property": 120,
+    "another_option_fits": 94,
+    "target_sound_not_heard": 76,
+    "incomplete": 8,
+    "answer_unsupported_by_report": 5
+  },
+  "blind_level_before": {
+    "1": 2278,
+    "2": 343,
+    "3": 274,
+    "4": 262,
+    "5": 1127
+  },
+  "blind_level_after": {
+    "1": 1594,
+    "2": 135,
+    "3": 83,
+    "4": 67,
+    "5": 134
+  },
+  "by_family": {
+    "sound": 159,
+    "prosody": 499,
+    "content": 393,
+    "speakers": 617,
+    "multi": 197,
+    "music": 148
+  },
+  "design": "the audio is described blind; a second deaf call judges that description against the claimed answer; a decoy presence test discards files the listener mis-hears",
+  "rejected_examples": [
+    {
+      "uid": "evo_mimo__g05-multi_compare_attr-000825",
+      "skill": "multi_compare_attr",
+      "family": "multi",
+      "question": "In which clip do you hear more different people talking?",
+      "intended": "A. the second clip",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio consists of two separate clips of different female speakers reading literary sentences.",
+      "reason": "The report states that there is exactly one distinct speaker in Clip 1 and one distinct speaker in Clip 2, meaning they are the same, which contradicts the claimed answer that the second clip has more.",
+      "decoy_claimed": null
+    },
+    {
+      "uid": "evo6_sft__g10-multi_contains-000700",
+      "skill": "multi_contains",
+      "family": "multi",
+      "question": "The sound of clunk occurs in which clip?",
+      "intended": "A. the first clip",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio consists of two clips featuring sliding sounds, with the second clip also containing electronic beeps.",
+      "reason": "The report describes only sliding sounds and electronic beeps with no mention of a clunk, which contradicts the claimed answer and suggests that 'none of the clips' (Option B) is the correct choice.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6_fine__g10-multi_same_speaker-000704",
+      "skill": "multi_same_speaker",
+      "family": "multi",
+      "question": "Do both clips feature the same speaker?",
+      "intended": "D. No, two different speakers",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio contains two clips of a single male speaker reading literary fragments, with the first clip being longer than the second.",
+      "reason": "The report explicitly states that both clips feature the same male speaker, which directly contradicts the claimed answer (D) and supports option A.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6__g04-dialogue_turns-000280",
+      "skill": "dialogue_turns",
+      "family": "speakers",
+      "question": "How many times does someone take the floor in this dialogue? Count each uninterrupted stretch by one speaker as one turn.",
+      "intended": "C. 2",
+      "problem": "answer_contradicted_by_report",
+      "heard": "Two adult men take turns reading literary or historical excerpts in English.",
+      "reason": "The report describes three distinct turns (Speaker 1, Speaker 2, and Speaker 1 again), which contradicts the claimed answer of 2 (Option C) and supports Option A (3).",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6_sft__g12-volume_pattern3-003241",
+      "skill": "volume_pattern3",
+      "family": "prosody",
+      "question": "Three segments are spoken one after another. Which pattern describes their loudness in order?",
+      "intended": "D. low-medium-high",
+      "problem": "answer_contradicted_by_report",
+      "heard": "A man reads three sentences aloud with clear pauses between them.",
+      "reason": "The report states that Segment 1 is the loudest, Segment 2 is of middle loudness, and Segment 3 is the quietest, which describes a high-medium-low pattern (Option A) rather than the claimed low-medium-high pattern (Option D).",
+      "decoy_claimed": null
+    },
+    {
+      "uid": "evo6_sft__g06-dialogue_turns-000207",
+      "skill": "dialogue_turns",
+      "family": "speakers",
+      "question": "How many turns are there in the dialogue? A turn is one uninterrupted speech by a single speaker. Each speaker change counts as one turn.",
+      "intended": "B. 4",
+      "problem": "answer_contradicted_by_report",
+      "heard": "Four different speakers read individual sentences in English over a continuous background sound of rustling paper.",
+      "reason": "The report explicitly states there are 5 conversational turns, which contradicts the claimed answer of 4 (Option B) and supports Option A.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo_mimo__g01-sound_duration_real-002501",
+      "skill": "sound_duration_real",
+      "family": "sound",
+      "question": "Which sound lasts longer?",
+      "intended": "D. footsteps",
+      "problem": "target_sound_not_heard",
+      "heard": "The audio contains the sound of plastic rustling followed by a dull thud as an object is set down.",
+      "reason": "The report describes plastic rustling and a dull thud rather than footsteps or a tabla, which contradicts the options and the claimed answer.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6__g01-speaker_count-005902",
+      "skill": "speaker_count",
+      "family": "speakers",
+      "question": "How many distinct people speak in this recording?",
+      "intended": "A. 4",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio is a compilation of short spoken phrases in English by multiple adult male and female speakers.",
+      "reason": "The report explicitly states there are 5 distinct speakers, which contradicts the claimed answer of 4.",
+      "decoy_claimed": null
+    },
+    {
+      "uid": "evo6__g04-dialogue_turns-000249",
+      "skill": "dialogue_turns",
+      "family": "speakers",
+      "question": "How many times does someone take the floor in this dialogue? Count each uninterrupted stretch by one speaker as one turn.",
+      "intended": "D. 2",
+      "problem": "answer_contradicted_by_report",
+      "heard": "An adult man and an adult woman take turns reading a story in English.",
+      "reason": "The report describes three distinct speaking events (man, woman, man), which means someone takes the floor 3 times (Option C), contradicting the claimed answer of 2 (Option D).",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo_kimi__g05-sound_change_real-002080",
+      "skill": "sound_change_real",
+      "family": "sound",
+      "question": "How does the audio change in the middle of the recording?",
+      "intended": "C. the ocean waves stops and the hissing starts",
+      "problem": "target_sound_not_heard",
+      "heard": "The audio features the sound of water splashing followed by heavy breathing through a snorkel, suggesting someone swimming.",
+      "reason": "The report describes water splashing (representing ocean waves) for the first 5 seconds followed by snorkel breathing (representing hissing) starting at 5 seconds, which directly supports option C.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6_sft__g13-volume_pattern3-003253",
+      "skill": "volume_pattern3",
+      "family": "prosody",
+      "question": "Listen to the three parts. What is the loudness pattern from the first to the third?",
+      "intended": "C. low-medium-high",
+      "problem": "answer_contradicted_by_report",
+      "heard": "A male voice dramatically reads three sentences from a story with varying pitch, loudness, and pauses.",
+      "reason": "The report describes the loudness of the three segments as middle, loudest, and quietest respectively, which indicates the pattern is medium-high-low (Option B) rather than the claimed low-medium-high (Option C).",
+      "decoy_claimed": null
+    },
+    {
+      "uid": "evo_kimi__g04-multi_same_speaker-000678",
+      "skill": "multi_same_speaker",
+      "family": "multi",
+      "question": "Were these two clips recorded by the same speaker?",
+      "intended": "D. Yes, the same speaker",
+      "problem": "target_sound_not_heard",
+      "heard": "The audio contains two separate clips of a female voice speaking English sentences, first 'her head was leaning against the flagstaff' and then 'I am sure Rosalind will be safe with you'.",
+      "reason": "The report explicitly states that both clips feature the same female speaker, which directly supports option D.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo_mimo__g10-sound_mixture_real-002487",
+      "skill": "sound_mixture_real",
+      "family": "sound",
+      "question": "Which of these sounds is present in the recording?",
+      "intended": "D. rhodes piano",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio consists entirely of the rapid, rhythmic sound of a pencil scribbling or shading on paper.",
+      "reason": "The report states that the only sound present is a pencil scribbling on paper, which contradicts the claim that a rhodes piano is heard in the recording.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo_af3__g08-sound_duration_real-002286",
+      "skill": "sound_duration_real",
+      "family": "sound",
+      "question": "Which of the two sounds has the longer duration?",
+      "intended": "D. acoustic guitar",
+      "problem": "heard_a_decoy",
+      "heard": "A continuous electric buzzing sound plays throughout the clip, interrupted briefly by the sharp sound of glass shattering.",
+      "reason": "The report does not mention an acoustic guitar at all, and instead identifies a continuous buzzing sound as the longer of the two sounds present.",
+      "decoy_claimed": [
+        "Cupboard open or close"
+      ]
+    },
+    {
+      "uid": "evo_kimi__g11-sound_louder_real-002575",
+      "skill": "sound_louder_real",
+      "family": "sound",
+      "question": "Which sound is louder?",
+      "intended": "A. marimba",
+      "problem": "answer_contradicted_by_report",
+      "heard": "A soft pop is immediately followed by the loud sound of a glass bottle shattering on a hard floor.",
+      "reason": "The report does not mention a marimba at all, and instead explicitly states that the glass shattering is the loudest sound, which contradicts the claimed answer and supports option C.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6__g05-long_scene_real-001150",
+      "skill": "long_scene_real",
+      "family": "multi",
+      "question": "Which sound directly follows the talking?",
+      "intended": "D. bass drum",
+      "problem": "answer_contradicted_by_report",
+      "heard": "A continuous recording of a mechanical clicking sound, interspersed with a squeak, a clink, a thud, a brief female spoken phrase, and ending with a mechanical whir.",
+      "reason": "The report indicates that the loud thud (bass drum) occurs at 10.0s before the female speech at 12.0s, and the sound directly following the speech is rhythmic mechanical clicking.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6_fine__g05-speaker_count-002719",
+      "skill": "speaker_count",
+      "family": "speakers",
+      "question": "How many speakers take part?",
+      "intended": "C. 2",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio consists of four spliced clips of different adult women reading short English phrases.",
+      "reason": "The report explicitly states that there are four distinct speakers in the recording, which contradicts the claimed answer of 2 (Option C) and directly supports Option A.",
+      "decoy_claimed": null
+    },
+    {
+      "uid": "evo_af3__g11-compound_speech_reasoning-000124",
+      "skill": "compound_speech_reasoning",
+      "family": "prosody",
+      "question": "Which sentence was spoken by the slowest speaker?",
+      "intended": "A. Saint bride's six saint james's nine.",
+      "problem": "report_silent_on_the_property",
+      "heard": "The audio features three different speakers reading short, unrelated text segments in succession.",
+      "reason": "The report describes all three utterances as being spoken at 'medium speed', so it does not identify any of the speakers as the slowest.",
+      "decoy_claimed": null
+    },
+    {
+      "uid": "evo6__g01-long_scene_real-001050",
+      "skill": "long_scene_real",
+      "family": "multi",
+      "question": "How many times does the sneeze sound occur in the clip?",
+      "intended": "B. 1",
+      "problem": "heard_a_decoy",
+      "heard": "The clip contains background music, a sliding sound, a clatter, a sneeze, a male voice speaking, and a final metallic click.",
+      "reason": "The report explicitly lists 'a sneeze' occurring only once at 7.1s, which supports the claimed answer of 1.",
+      "decoy_claimed": [
+        "Ratchet, pawl"
+      ]
+    },
+    {
+      "uid": "evo_q3__g04-music_repeat_detection-001110",
+      "skill": "music_repeat_detection",
+      "family": "music",
+      "question": "Of the three segments, which two are the same recording?",
+      "intended": "C. all three are different",
+      "problem": "report_silent_on_the_property",
+      "heard": "The audio begins with a bubbly synthesizer arpeggio before transitioning into a smooth, slow-tempo neo-soul track featuring electric piano, bass, drums, and wordless female vocals.",
+      "reason": "The report describes three vocalizations ('Ooh', 'Ooh', 'Ah') but is silent on whether the first two 'Ooh' sounds are identical recordings or different performances.",
+      "decoy_claimed": [
+        "Glockenspiel"
+      ]
+    },
+    {
+      "uid": "evo6_sft__g13-syllable_count-002995",
+      "skill": "syllable_count",
+      "family": "prosody",
+      "question": "Count the syllables of the spoken word. Which description is correct?",
+      "intended": "D. a five-syllable word",
+      "problem": "report_silent_on_the_property",
+      "heard": "A man says 'The word is laboratory'.",
+      "reason": "The report transcribes the spoken word as 'laboratory' but does not provide any phonetic details or syllable counts to indicate how it was pronounced.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6_fine__g10-sentence_intonation-001845",
+      "skill": "sentence_intonation",
+      "family": "prosody",
+      "question": "Identify the overall intonation contour of the spoken sentence.",
+      "intended": "B. Rise-fall intonation",
+      "problem": "answer_contradicted_by_report",
+      "heard": "A man describes a museum exhibition focusing on 1960s photographs over soft background music.",
+      "reason": "The report states that 'the pitch falls over the utterance as a whole,' which contradicts the claimed 'Rise-fall intonation' and directly supports 'Falling intonation' (Option C).",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6__g05-sound_duration_real-004845",
+      "skill": "sound_duration_real",
+      "family": "sound",
+      "question": "Of the two sounds, which one continues for more time?",
+      "intended": "A. clapping",
+      "problem": "target_sound_not_heard",
+      "heard": "The audio contains a faint whisper, followed by two hand claps and the sound of an object spinning to a stop on a hard surface.",
+      "reason": "The report states that the spinning object (coin dropping) is the longest sound, lasting about 2.3 seconds, while the claps are very short (under 0.5 seconds), which contradicts the claimed answer that clapping continues for more time.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo_af3__g13-sound_duration_real-002226",
+      "skill": "sound_duration_real",
+      "family": "sound",
+      "question": "Which of the two sounds has the longer duration?",
+      "intended": "B. microwave oven",
+      "problem": "heard_a_decoy",
+      "heard": "The audio contains a sequence of four mechanical clicks followed by a brief, quiet giggle.",
+      "reason": "The report explicitly states that the giggle is longer than the clicks (lasting about 0.4 seconds compared to less than 0.2 seconds), which contradicts the claimed answer of 'microwave oven' and directly supports option C ('giggle').",
+      "decoy_claimed": [
+        "Chink, clink"
+      ]
+    },
+    {
+      "uid": "evo6_sft__g01-sound_mixture_real-002643",
+      "skill": "sound_mixture_real",
+      "family": "sound",
+      "question": "Which one of these sounds is missing from the recording?",
+      "intended": "A. singing bowl",
+      "problem": "another_option_fits",
+      "heard": "A short synthesizer horn sound plays over a continuous background of sizzling static noise.",
+      "reason": "The report indicates that none of the options (singing bowl, flute, giggle, or dripping) are present in the recording, meaning any of them could be considered the missing sound.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6_fine__g03-sound_duration_real-002151",
+      "skill": "sound_duration_real",
+      "family": "sound",
+      "question": "Of the two sounds, which one continues for more time?",
+      "intended": "A. finger snap",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio consists of a rhythmic sequence of three low electronic buzzes and four sharp woodblock clicks.",
+      "reason": "The report describes entirely different sounds (low electronic buzz and woodblock click) than the ones mentioned in the options (finger snap and electric guitar).",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6_sft__g02-speech_in_scene-002712",
+      "skill": "speech_in_scene",
+      "family": "sound",
+      "question": "What is happening in the background of this speech recording?",
+      "intended": "D. flowing stream",
+      "problem": "target_sound_not_heard",
+      "heard": "A male voice reads a sentence about a grocery list in a quiet indoor setting.",
+      "reason": "The report describes the background sound as a 'faint background hiss' in a 'quiet indoor environment,' which directly contradicts the claimed answer of a 'flowing stream.'",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6__g05-disfluency_type-000665",
+      "skill": "disfluency_type",
+      "family": "prosody",
+      "question": "Which types of disfluencies are present in the audio?\n- Filled pauses: e.g., uh, um\n- Discourse markers: e.g., well, you know\n- Restarts: interrupted or repeated sentence starts\n- Explicit editing terms: e.g., I mean\n- None: if the speech is fluent.",
+      "intended": "B. explicit editing terms, restarts",
+      "problem": "answer_contradicted_by_report",
+      "heard": "A man speaks with some hesitation about where a passport is kept, accompanied by the sound of crickets chirping in the background.",
+      "reason": "The report identifies a 'filled hesitation' (filled pause) and a 'self-correction' (explicit editing term) but mentions no restarts, which contradicts the claimed answer B.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo_af3__g13-multi_contains-000792",
+      "skill": "multi_contains",
+      "family": "multi",
+      "question": "The sound of a flute occurs in which clip?",
+      "intended": "B. the first clip",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio consists of three distinct 4-second clips: insect buzzing, metallic clinking, and insect buzzing again.",
+      "reason": "The report states that Clip 1 contains the buzzing of insects and no flute is present in any of the clips, which contradicts the claimed answer (B) and instead supports option C.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6_sft__g01-speaker_count-002796",
+      "skill": "speaker_count",
+      "family": "speakers",
+      "question": "How many speakers take part?",
+      "intended": "B. 2",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio features three different adult women speaking English in succession, each reading a different sentence.",
+      "reason": "The report explicitly states there are three distinct speakers, which contradicts the claimed answer of 2 (Option B) and supports Option A.",
+      "decoy_claimed": null
+    },
+    {
+      "uid": "evo6__g08-long_scene_real-001480",
+      "skill": "long_scene_real",
+      "family": "multi",
+      "question": "How many separate bassoon sounds can be heard?",
+      "intended": "C. 5",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio consists of three 5-second clips featuring a low synthesizer drone, with the first clip containing speech and the latter two containing a low thud.",
+      "reason": "The report describes a low synthesizer drone, speech, and low thuds, but makes no mention of any bassoon sounds, which contradicts the question's premise.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo_af3__g04-compound_speech_reasoning-000050",
+      "skill": "compound_speech_reasoning",
+      "family": "prosody",
+      "question": "Of the three utterances, identify the one by the speaker who speaks fastest. What is that speaker saying?",
+      "intended": "D. But our children are hardly used to such things.",
+      "problem": "report_silent_on_the_property",
+      "heard": "The audio consists of three different people reading literary sentences in sequence.",
+      "reason": "The report describes all three utterances as having 'medium speed' and does not identify which speaker speaks the fastest.",
+      "decoy_claimed": null
+    },
+    {
+      "uid": "evo_kimi__g06-music_segment_louder-001192",
+      "skill": "music_segment_louder",
+      "family": "music",
+      "question": "Which segment is louder?",
+      "intended": "B. the second segment",
+      "problem": "report_silent_on_the_property",
+      "heard": "The audio starts with a brief spraying sound, followed by a short blues rock music clip featuring a male vocalist singing.",
+      "reason": "The report does not compare the loudness of the first segment (the spraying sound) with the second segment (the music).",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6_sft__g08-speaker_count-002625",
+      "skill": "speaker_count",
+      "family": "speakers",
+      "question": "Count the number of different voices.",
+      "intended": "A. 4",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio consists of six different speakers reading unrelated sentences in English.",
+      "reason": "The report explicitly states there are 6 distinct speakers, which contradicts the claimed answer of 4, and none of the other options fit the report either.",
+      "decoy_claimed": null
+    },
+    {
+      "uid": "evo6_sft__g07-sound_id_real-002238",
+      "skill": "sound_id_real",
+      "family": "sound",
+      "question": "Which of the following best describes the sound in the clip?",
+      "intended": "D. harmonica",
+      "problem": "answer_contradicted_by_report",
+      "heard": "An electronic chime is followed by a female voice announcing 'Station Zoo' in German, suggesting a train or subway station environment.",
+      "reason": "The report describes an electronic chime and a female voice announcing 'Station Zoo', which is entirely different from a harmonica or any of the other musical instruments listed in the options.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6__g07-music_order_concat-002236",
+      "skill": "music_order_concat",
+      "family": "music",
+      "question": "Which instrument opens the clip?",
+      "intended": "B. steelpan",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio features a short synth-pop music intro followed by a bell ding and a male voice singing 'We were walking hand in hand' over an acoustic guitar.",
+      "reason": "The report states that the clip opens with an electronic synthesizer, which contradicts the claimed answer of a steelpan.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6_fine__g09-sound_change_real-002171",
+      "skill": "sound_change_real",
+      "family": "sound",
+      "question": "What happens halfway through the clip?",
+      "intended": "C. the printer stops and the gurgling water starts",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio contains the sound of a container opening, followed by loud crunching/chewing, and ends with a continuous bubbling or gurgling liquid sound.",
+      "reason": "The report describes chewing and crunching food stopping before the gurgling liquid starts, with no mention of a printer, which contradicts the claimed answer.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo_af3__g09-multi_contains-000802",
+      "skill": "multi_contains",
+      "family": "multi",
+      "question": "The sound of finger snap occurs in which clip?",
+      "intended": "A. the first clip",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio consists of three clips featuring lighter flicking and plastic crinkling sounds, with no speech or music present.",
+      "reason": "The report describes only lighter flicking and plastic crinkling sounds with no mention of a finger snap, which contradicts the claimed answer (A) and instead supports option B (none of the clips).",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo_kimi__g01-sound_duration_real-002487",
+      "skill": "sound_duration_real",
+      "family": "sound",
+      "question": "Which of the two sounds has the longer duration?",
+      "intended": "B. tambourine",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio consists of a continuous shaking or rattling sound followed by a sharp click.",
+      "reason": "The report describes entirely different sounds (a spray paint can and a cap closing) from the instruments/sounds named in the options (tambourine and camera shutter).",
+      "decoy_claimed": null
+    },
+    {
+      "uid": "evo6__g05-long_scene_real-001231",
+      "skill": "long_scene_real",
+      "family": "multi",
+      "question": "What is the final sound event in this long recording?",
+      "intended": "B. machine gun fire",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio contains two clips featuring shaking sounds and a loud mechanical buzz, with the second clip also containing a female voice speaking.",
+      "reason": "The report states the final sound event is the shaking of a plastic container with small objects inside, which contradicts the claimed answer of machine gun fire and instead fits 'jingle bell' much better.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6_sft__g05-syllable_count-003047",
+      "skill": "syllable_count",
+      "family": "prosody",
+      "question": "The speaker says a single word. How many syllables does it have?",
+      "intended": "D. a two-syllable word",
+      "problem": "answer_contradicted_by_report",
+      "heard": "A person slowly whispers the phrase 'The word is dragon'.",
+      "reason": "The report states the speaker says the phrase 'The word is dragon' (consisting of five syllables), which contradicts the question's premise that the speaker says a single word.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo_q3__g01-music_repeat_detection-001227",
+      "skill": "music_repeat_detection",
+      "family": "music",
+      "question": "Of the three segments, which two are the same recording?",
+      "intended": "A. all three are different",
+      "problem": "report_silent_on_the_property",
+      "heard": "The audio consists of two distinct musical segments: an energetic electronic track with male vocals in Hindi/English, followed by a cheerful, simpler track with a female voice singing in English.",
+      "reason": "The report only describes two distinct musical segments, so it is silent on the third segment mentioned in the question.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6_sft__g05-speech_pair_compare-002754",
+      "skill": "speech_pair_compare",
+      "family": "prosody",
+      "question": "Two sentences are spoken by one speaker. Which one is louder?",
+      "intended": "B. the second utterance",
+      "problem": "answer_contradicted_by_report",
+      "heard": "A female voice reads two sentences with a continuous low-frequency hum in the background.",
+      "reason": "The report describes both utterances as having \"middle\" loudness, which contradicts the claim that the second is louder and instead supports option D (both are about the same).",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6__g02-long_scene_real-001125",
+      "skill": "long_scene_real",
+      "family": "multi",
+      "question": "How many times does the sliding door sound occur in the clip?",
+      "intended": "B. 2",
+      "problem": "heard_a_decoy",
+      "heard": "The audio contains two clips with background rain and clicking sounds, where the first clip features a growl, a scraping sound, and a female speaking, and the second clip features two deep burps.",
+      "reason": "The report mentions 'a scraping or sliding sound' only once (at 9.0s), which contradicts the claimed answer of 2 (Option B) and supports Option D (1).",
+      "decoy_claimed": [
+        "Gurgling"
+      ]
+    },
+    {
+      "uid": "evo6_fine__g02-sound_duration_real-002179",
+      "skill": "sound_duration_real",
+      "family": "sound",
+      "question": "Which sound lasts longer?",
+      "intended": "B. ticking clock",
+      "problem": "target_sound_not_heard",
+      "heard": "The audio contains a continuous liquid trickling and a rhythmic ticking, accompanied by a brief rustling sound towards the end.",
+      "reason": "The report states that the ticking sound lasts the full 5 seconds of the clip, while the rustling sound lasts about 2 seconds, supporting the claim that the ticking clock lasts longer.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo_kimi__g01-sound_louder_real-002683",
+      "skill": "sound_louder_real",
+      "family": "sound",
+      "question": "Which of the two sounds is louder?",
+      "intended": "B. drawer",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio contains the sound of a camera shutter clicking followed by a book being slammed shut.",
+      "reason": "The report does not mention a drawer at all, instead stating that the book slamming shut is the loudest sound, which contradicts the claimed answer.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo_af3__g09-dialogue_turns-000214",
+      "skill": "dialogue_turns",
+      "family": "speakers",
+      "question": "How many turns are there in the dialogue? A turn is one uninterrupted speech by a single speaker. Each speaker change counts as one turn.",
+      "intended": "C. 5",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The recording consists of three different speakers reading various English text excerpts in alternating turns.",
+      "reason": "The report lists six distinct speaking events and states that the speaker changes five times, which means there are six turns (Option A), contradicting the claimed answer of five (Option C).",
+      "decoy_claimed": null
+    },
+    {
+      "uid": "evo_mimo__g04-disfluency_type-000395",
+      "skill": "disfluency_type",
+      "family": "prosody",
+      "question": "Which types of disfluencies are present in the audio?\n- Filled pauses: e.g., uh, um\n- Discourse markers: e.g., well, you know\n- Restarts: interrupted or repeated sentence starts\n- Explicit editing terms: e.g., I mean\n- None: if the speech is fluent.",
+      "intended": "B. discourse markers",
+      "problem": "answer_contradicted_by_report",
+      "heard": "A female voice says, 'check the light train schedule on his phone before leaving'.",
+      "reason": "The report explicitly states there are no audible disfluencies in the speech, which contradicts the claimed answer that discourse markers are present.",
+      "decoy_claimed": [
+        "Computer keyboard"
+      ]
+    },
+    {
+      "uid": "evo_af3__g07-sound_louder_real-002640",
+      "skill": "sound_louder_real",
+      "family": "sound",
+      "question": "Of the two sounds in the clip, which one is louder?",
+      "intended": "D. cat meow",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio contains a single cat meow followed immediately by a decaying cymbal crash.",
+      "reason": "The report explicitly states that the cymbal crash is the loudest sound and the cat meow is quieter, which contradicts the claimed answer (D) and supports option A.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo_kimi__g12-speaker_count-002767",
+      "skill": "speaker_count",
+      "family": "speakers",
+      "question": "How many distinct people speak in this recording?",
+      "intended": "A. 3",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio consists of four different speakers reading short, disconnected English sentences in sequence.",
+      "reason": "The report explicitly states there are four distinct speakers in the recording, which contradicts the claimed answer of 3 (Option A) and supports Option C (4).",
+      "decoy_claimed": null
+    },
+    {
+      "uid": "evo6_sft__g03-speech_pair_compare-002679",
+      "skill": "speech_pair_compare",
+      "family": "prosody",
+      "question": "Compare the two utterances: which is louder?",
+      "intended": "C. the first utterance",
+      "problem": "answer_contradicted_by_report",
+      "heard": "A man speaks in Chinese about a projector bulb needing replacement and a computer system update, accompanied by a continuous background hum.",
+      "reason": "The report states that both utterances are spoken with 'middle loudness', which contradicts the claimed answer that the first is louder and instead supports option D.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6_sft__g01-music_repeat_detection-001289",
+      "skill": "music_repeat_detection",
+      "family": "music",
+      "question": "Of the three segments, which two are the same recording?",
+      "intended": "A. the first and the second",
+      "problem": "report_silent_on_the_property",
+      "heard": "The audio starts with a metallic scraping sound, transitioning into an upbeat Greek dance-pop song with electronic drums, a synthesizer, and a female vocalist.",
+      "reason": "The report describes a single continuous audio clip and does not mention or describe three distinct segments, making it impossible to determine which two are the same.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6__g03-long_scene_real-001041",
+      "skill": "long_scene_real",
+      "family": "multi",
+      "question": "Immediately following the spoken voice, which sound occurs?",
+      "intended": "C. clink",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio contains two segments of applause, featuring a sigh and a thud in the first, and a female speaker saying 'The second and fourth unaccented' followed by a click in the second.",
+      "reason": "The report states that applause immediately follows the spoken voice, and the final sound is a 'click' rather than a 'clink'.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo6_sft__g09-volume_pattern3-003125",
+      "skill": "volume_pattern3",
+      "family": "prosody",
+      "question": "Three segments are spoken one after another. Which pattern describes their loudness in order?",
+      "intended": "A. medium-high-low",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio consists of three different female speakers reading short sentences in sequence.",
+      "reason": "The report states that the first utterance is the loudest (high), the second is of middle loudness (medium), and the third is the quietest (low), which contradicts the claimed answer of medium-high-low.",
+      "decoy_claimed": null
+    },
+    {
+      "uid": "evo6__g05-long_scene_real-001210",
+      "skill": "long_scene_real",
+      "family": "multi",
+      "question": "What sound comes immediately after the speech?",
+      "intended": "C. packing tape",
+      "problem": "heard_a_decoy",
+      "heard": "The audio features three segments, each starting with a rooster crowing and ending with finger snaps, with the third segment also containing a female speaker.",
+      "reason": "The report states that the speech is followed by two finger snaps, which contradicts the claimed answer of packing tape and directly supports option A (finger snap).",
+      "decoy_claimed": [
+        "Shuffling cards"
+      ]
+    },
+    {
+      "uid": "evo_kimi__g08-music_order_concat-001008",
+      "skill": "music_order_concat",
+      "family": "music",
+      "question": "Which instrument is heard first?",
+      "intended": "B. glockenspiel",
+      "problem": "answer_contradicted_by_report",
+      "heard": "The audio consists of a brief electronic music sequence that abruptly shifts from an upbeat, drum-driven rhythm to a gentle, descending synthesizer melody.",
+      "reason": "The report states that synthesizers and electronic drums are the instruments heard, which contradicts the claimed answer of glockenspiel as well as all other options.",
+      "decoy_claimed": [
+        "Lullaby"
+      ]
+    },
+    {
+      "uid": "evo_q3__g06-speech_in_scene-002713",
+      "skill": "speech_in_scene",
+      "family": "sound",
+      "question": "Apart from the voice, what sound is present in the clip?",
+      "intended": "C. frying",
+      "problem": "answer_contradicted_by_report",
+      "heard": "A person speaks a sentence about walking along a river path over a continuous background sound of rain or rushing water.",
+      "reason": "The report explicitly identifies the background sound as rain or rushing water, which contradicts the claimed answer of frying.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo_af3__g07-content_qa-000126",
+      "skill": "content_qa",
+      "family": "content",
+      "question": "Which of the following did the speaker NOT do before the guests arrived?",
+      "intended": "C. Checked the keys",
+      "problem": "another_option_fits",
+      "heard": "A woman narrates a story in Mandarin Chinese about her sister's visit and getting locked out of her apartment, accompanied by a steady, rhythmic clicking sound.",
+      "reason": "While the speaker did not check her keys, she also did not call the locksmith until after the guests arrived, meaning Option A is also a correct answer to the question.",
+      "decoy_claimed": []
+    },
+    {
+      "uid": "evo_mimo__g05-multi_same_speaker-000944",
+      "skill": "multi_same_speaker",
+      "family": "multi",
+      "question": "Is the voice in the first clip the same as the voice in the second clip?",
+      "intended": "B. Yes, the same speaker",
+      "problem": "heard_a_decoy",
+      "heard": "The audio contains two distinct clips: a female voice speaking over a rapid clicking sound, followed by a male voice speaking in a quiet setting.",
+      "reason": "The report explicitly states that the first clip contains a female voice and the second contains a male voice, totaling two distinct speakers, which contradicts the claimed answer (B) and supports option A.",
+      "decoy_claimed": [
+        "Ratchet, pawl"
+      ]
+    },
+    {
+      "uid": "evo6_sft__g03-sound_id_real-002170",
+      "skill": "sound_id_real",
+      "family": "sound",
+      "question": "What is the source of the sound in this audio?",
+      "intended": "A. harpsichord",
+      "problem": "target_sound_not_heard",
+      "heard": "The audio features a single resonant chime strike followed by a sustained low vocal hum, suggesting a meditative setting.",
+      "reason": "The report describes a metallic chime strike and a vocal hum, which contradicts the claimed answer of a harpsichord, while the glockenspiel option fits the chime description much better.",
+      "decoy_claimed": []
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "audited": 8953,
+  "kept": 4288,
+  "showcase_rate": 0.4789,
+  "incomplete_audits": 2,
+  "gate_outcomes": {
+    "ok": 4288,
+    "pass_a_rejected": 1548,
+    "pass_a_quality_3": 1123,
+    "pass_b_rejected": 428,
+    "pass_b_quality_3": 423,
+    "pass_a_artifact_starts_or_ends_mid_sound": 329,
+    "pass_a_artifact_robotic_artifact": 205,
+    "pass_b_artifact_robotic_artifact": 194,
+    "pass_b_artifact_starts_or_ends_mid_sound": 176,
+    "pass_a_artifact_truncated_word": 85,
+    "neither_pass_would_showcase": 74,
+    "pass_b_artifact_truncated_word": 34,
+    "pass_a_artifact_metallic": 12,
+    "pass_b_artifact_click_at_join": 11,
+    "pass_a_artifact_click_at_join": 10,
+    "pass_b_artifact_metallic": 8,
+    "pass_a_artifact_distortion": 2,
+    "audit_incomplete": 2,
+    "pass_a_artifact_dead_silence": 1
+  },
+  "quality_histogram": {
+    "1": 5,
+    "2": 1583,
+    "3": 4289,
+    "4": 2474,
+    "5": 9551
+  },
+  "verdict_histogram": {
+    "showcase": 9695,
+    "acceptable": 4454,
+    "reject": 3753
+  },
+  "artifact_histogram": {
+    "truncated_word": 2763,
+    "starts_or_ends_mid_sound": 2670,
+    "robotic_artifact": 1816,
+    "noise_masks_foreground": 749,
+    "metallic": 551,
+    "distortion": 540,
+    "click_at_join": 289,
+    "pumping": 19,
+    "dead_silence": 8
+  },
+  "speech_naturalness_histogram": {
+    "natural": 10058,
+    "no_speech": 4376,
+    "slightly_robotic": 2800,
+    "robotic": 633,
+    "garbled": 35
+  },
+  "by_family": {
+    "sound": 762,
+    "multi": 668,
+    "prosody": 808,
+    "content": 571,
+    "speakers": 921,
+    "music": 558
+  },
+  "distinct_skills": 77,
+  "gate": "both passes: verdict==showcase, quality>=4, no artifacts, speech not robotic/garbled"
+}

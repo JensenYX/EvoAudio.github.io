@@ -1,0 +1,163 @@
+{
+  "verified_input": 2013,
+  "selected": 180,
+  "per_cell_target": 6,
+  "grid": {
+    "prosody": {
+      "1": 6,
+      "2": 6,
+      "3": 6,
+      "4": 6,
+      "5": 6
+    },
+    "speakers": {
+      "1": 6,
+      "2": 6,
+      "3": 6,
+      "4": 6,
+      "5": 6
+    },
+    "content": {
+      "1": 6,
+      "2": 6,
+      "3": 6,
+      "4": 6,
+      "5": 6
+    },
+    "sound": {
+      "1": 6,
+      "2": 6,
+      "3": 6,
+      "4": 6,
+      "5": 6
+    },
+    "music": {
+      "1": 6,
+      "2": 6,
+      "3": 6,
+      "4": 6,
+      "5": 6
+    },
+    "multi": {
+      "1": 6,
+      "2": 6,
+      "3": 6,
+      "4": 6,
+      "5": 6
+    }
+  },
+  "short_cells": [],
+  "distinct_skills": 57,
+  "skills": {
+    "dialogue_turns": 6,
+    "multi_contains": 6,
+    "speaking_rate": 5,
+    "pause_after_word": 5,
+    "speaker_count": 5,
+    "dialogue_turns_real": 5,
+    "dialogue_qa": 5,
+    "content_qa": 5,
+    "real_dialogue_qa": 5,
+    "real_dialogue_emotion": 5,
+    "music_segment_louder": 5,
+    "music_tempo_change": 5,
+    "music_dynamics_real": 5,
+    "long_scene_real": 5,
+    "multi_same_speaker": 5,
+    "volume_pattern3": 4,
+    "turn_order": 4,
+    "speaker_gender": 4,
+    "real_speaker_count": 4,
+    "dialogue_emotion": 4,
+    "speech_semantic_qa_real": 4,
+    "audioset_sound_id": 4,
+    "sound_id_real": 4,
+    "music_pitch_shift_compare": 4,
+    "multi_clip_crossref": 4,
+    "multi_compare_attr": 4,
+    "syllable_count": 3,
+    "speech_pair_compare": 3,
+    "sound_reasoning_real": 3,
+    "sound_order_real": 3,
+    "sound_louder_real": 3,
+    "sound_count": 3,
+    "long_scene": 3,
+    "multi_audio": 3,
+    "speed_pattern3": 2,
+    "disfluency_type": 2,
+    "compound_speech_reasoning": 2,
+    "pitch_pattern3": 2,
+    "language_id": 2,
+    "sound_change_real": 2,
+    "sound_duration": 2,
+    "sound_category": 2,
+    "song_in_scene": 2,
+    "music_vocals_present": 2,
+    "music_speed_compare": 2,
+    "song_change": 2,
+    "speech_pitch": 1,
+    "disfluency": 1,
+    "real_emotion": 1,
+    "long_content_qa": 1,
+    "sound_loudness": 1,
+    "scene_inference": 1,
+    "sound_timing": 1,
+    "sound_count_real": 1,
+    "music_genre_real": 1,
+    "music_instrument_present": 1,
+    "music_pitch": 1
+  },
+  "tool_usage": {
+    "gain_db": 180,
+    "peak_limit": 180,
+    "crop": 132,
+    "concat": 124,
+    "src:fsd50k": 120,
+    "mix": 106,
+    "silence_insertion": 97,
+    "trim_silence": 72,
+    "tts": 49,
+    "src:librispeech": 37,
+    "overlay": 37,
+    "src:audioset": 30,
+    "tts_style": 13,
+    "src:meld": 11,
+    "time_stretch": 10,
+    "pitch_shift": 8,
+    "src:ravdess": 4,
+    "src:msp": 4,
+    "src:iemocap": 4,
+    "ramp_gain": 1,
+    "src:midi": 1
+  },
+  "length_buckets": {
+    "medium": 94,
+    "short": 50,
+    "long": 36
+  },
+  "total_audio_minutes": 38.1,
+  "mean_quality": 4.99,
+  "difficulty": {
+    "weights": {
+      "solver_miss": 0.3,
+      "auditor_miss": 0.25,
+      "cue_subtlety": 0.25,
+      "masking": 0.1,
+      "load": 0.1
+    },
+    "banding": "within-family quintiles of the composite score",
+    "mean_score_by_level": {
+      "1": 0.145,
+      "2": 0.255,
+      "3": 0.332,
+      "4": 0.413,
+      "5": 0.565
+    }
+  },
+  "diversity_rules": [
+    "a skill may not repeat in a cell until every available skill appeared once",
+    "a tool combination may not repeat within a cell",
+    "each family nudged toward short (<6s), medium (6-20s) and long (>=20s) clips",
+    "quality rank breaks all ties; cells ship short rather than padded"
+  ]
+}

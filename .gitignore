@@ -216,3 +216,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ---------------------------------------------------------------------------
+# Demo curation pipeline (tools/01..07)
+#
+# The large intermediate tables are reproducible from the source corpus and run
+# to ~160 MB, so they stay out of the repo. The per-stage summaries and the
+# Gemini call caches are the audit trail and are small enough to keep, since
+# they are what makes the selection re-checkable without paying for the API
+# again.
+# ---------------------------------------------------------------------------
+curation/*.jsonl
+curation/*.log
+!curation/*_cache.jsonl

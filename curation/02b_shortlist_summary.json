@@ -1,0 +1,169 @@
+{
+  "screened_input": 37203,
+  "shortlisted": 9727,
+  "family_budget": {
+    "content": 3000,
+    "speakers": 2200,
+    "prosody": 1600,
+    "music": 1600,
+    "multi": 1400,
+    "sound": 1200
+  },
+  "rare_skill_ceiling": 150,
+  "by_family": {
+    "prosody": {
+      "available": 5586,
+      "shortlisted": 1600,
+      "rare_skills_taken_whole": [
+        "disfluency",
+        "final_consonant_match",
+        "speech_loudness",
+        "speech_pair_compare",
+        "speech_pitch",
+        "syllable_count"
+      ],
+      "per_skill": {
+        "pause_after_word": 234,
+        "syllable_count": 140,
+        "speech_pair_compare": 130,
+        "disfluency_type": 129,
+        "speed_pattern3": 124,
+        "volume_pattern3": 124,
+        "speech_pause": 121,
+        "pitch_pattern3": 103,
+        "compound_speech_reasoning": 103,
+        "speech_loudness": 102,
+        "speaking_rate": 86,
+        "sentence_intonation": 78,
+        "speech_pitch": 64,
+        "final_consonant_match": 33,
+        "disfluency": 29
+      }
+    },
+    "speakers": {
+      "available": 8045,
+      "shortlisted": 2200,
+      "rare_skills_taken_whole": [
+        "dialogue_language",
+        "language_id",
+        "speaker_binding",
+        "speaker_gender"
+      ],
+      "per_skill": {
+        "speaker_count": 502,
+        "speaker_match5": 481,
+        "dialogue_turns": 410,
+        "dialogue_turns_real": 280,
+        "turn_order": 172,
+        "real_speaker_count": 163,
+        "speaker_gender": 126,
+        "speaker_binding": 36,
+        "language_id": 23,
+        "dialogue_language": 7
+      }
+    },
+    "content": {
+      "available": 1727,
+      "shortlisted": 1727,
+      "rare_skills_taken_whole": [
+        "dialogue_emotion",
+        "long_content_qa",
+        "real_emotion",
+        "real_long_qa",
+        "speech_semantic_qa_real"
+      ],
+      "per_skill": {
+        "dialogue_qa": 641,
+        "content_qa": 356,
+        "real_dialogue_qa": 333,
+        "real_dialogue_emotion": 258,
+        "real_emotion": 76,
+        "dialogue_emotion": 28,
+        "speech_semantic_qa_real": 17,
+        "long_content_qa": 17,
+        "real_long_qa": 1
+      }
+    },
+    "sound": {
+      "available": 12867,
+      "shortlisted": 1200,
+      "rare_skills_taken_whole": [
+        "audioset_sound_id",
+        "sound_category",
+        "sound_identification",
+        "sound_loudness"
+      ],
+      "per_skill": {
+        "sound_mixture_real": 98,
+        "sound_loudness": 92,
+        "sound_louder_real": 87,
+        "sound_duration_real": 77,
+        "speech_in_scene": 75,
+        "sound_identification": 73,
+        "audioset_sound_id": 69,
+        "sound_category": 64,
+        "sound_count": 61,
+        "sound_change_real": 58,
+        "sound_reasoning_real": 54,
+        "sound_mixture": 43,
+        "real_speech_in_scene": 40,
+        "sound_reasoning": 37,
+        "sound_change": 36,
+        "sound_count_real": 35,
+        "sound_order_real": 34,
+        "sound_timing": 31,
+        "scene_from_sounds": 29,
+        "sound_id_real": 29,
+        "scene_inference": 28,
+        "sound_duration": 25,
+        "sound_order": 25
+      }
+    },
+    "music": {
+      "available": 6207,
+      "shortlisted": 1600,
+      "rare_skills_taken_whole": [
+        "music_dynamics_real",
+        "music_genre_real",
+        "music_in_scene",
+        "music_instrument_present",
+        "music_pitch",
+        "music_vocals_present",
+        "song_change"
+      ],
+      "per_skill": {
+        "music_repeat_detection": 274,
+        "music_order_concat": 227,
+        "music_segment_louder": 215,
+        "music_in_scene": 143,
+        "music_dynamics_real": 140,
+        "music_speed_compare": 97,
+        "music_pitch_shift_compare": 91,
+        "music_tempo_change": 86,
+        "music_pitch": 82,
+        "song_in_scene": 78,
+        "song_change": 75,
+        "music_genre_real": 41,
+        "music_vocals_present": 28,
+        "music_instrument_present": 23
+      }
+    },
+    "multi": {
+      "available": 2771,
+      "shortlisted": 1400,
+      "rare_skills_taken_whole": [
+        "multi_audio"
+      ],
+      "per_skill": {
+        "long_scene": 266,
+        "long_scene_real": 259,
+        "multi_compare_attr": 235,
+        "multi_same_speaker": 231,
+        "multi_clip_crossref": 178,
+        "multi_contains": 142,
+        "multi_audio": 89
+      }
+    }
+  },
+  "distinct_skills": 78
+}

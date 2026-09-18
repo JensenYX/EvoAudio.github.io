@@ -1,0 +1,35 @@
+{
+  "screened": 45120,
+  "kept": 37203,
+  "rejected": 7917,
+  "reject_reasons": {
+    "abrupt_tail_cut": 3450,
+    "abrupt_head_cut": 2601,
+    "dead_high_band": 1477,
+    "mostly_silent": 1250,
+    "unexplained_dead_air": 1150,
+    "dc_offset": 533,
+    "level_too_low": 28,
+    "seam_click": 9,
+    "inaudible_peak": 3
+  },
+  "by_family": {
+    "music": 6207,
+    "sound": 12867,
+    "speakers": 8045,
+    "prosody": 5586,
+    "multi": 2771,
+    "content": 1727
+  },
+  "distinct_skills": 78,
+  "thresholds": {
+    "min_peak": 0.05,
+    "min_rms_db": -45.0,
+    "max_silence_frac": 0.5,
+    "max_unexplained_gap_sec": 1.5,
+    "edge_margin_db": 6.0,
+    "min_hf_fraction": 0.0001,
+    "max_dc": 0.01,
+    "seam_jump_ratio": 8.0
+  }
+}
