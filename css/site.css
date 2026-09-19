@@ -50,6 +50,10 @@
   --font-display: "Google Sans", "Noto Sans", system-ui, sans-serif;
   --font-body: "Noto Sans", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, Menlo, monospace;
+  /* The framework figure is lettered in Comic Sans, so the wordmark follows it.
+     Comic Neue is the webfont stand-in for Linux and Android, which ship
+     neither Comic Sans nor anything close to it. */
+  --font-brand: "Comic Sans MS", "Comic Neue", "Chalkboard SE", cursive;
 
   --shadow-card: 0 10px 34px rgba(10, 46, 110, 0.1);
 
@@ -198,8 +202,30 @@ button {
   letter-spacing: -0.01em;
   color: var(--ink);
 }
+/* The wordmark picks up the mark's own blue-to-green ribbon. Every stop stays
+   above 4:1 on white, so the gradient never costs the heading its contrast. */
 .publication-title__brand {
   white-space: nowrap;
+  font-family: var(--font-brand);
+  /* Comic Sans is already loose, so it drops the display face's negative
+     tracking. The 1.02em lines its x-height up with the rest of the heading;
+     its taller ascenders are the face's own character and are left alone. */
+  letter-spacing: 0;
+  font-size: 1.02em;
+}
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .publication-title__brand {
+    background-image: linear-gradient(
+      100deg,
+      #0b57d0 0%,
+      #1b7fc5 38%,
+      #1e7d72 68%,
+      #2f8f56 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 }
 .publication-title__brand::before {
   content: "";
