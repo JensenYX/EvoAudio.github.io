@@ -299,7 +299,10 @@ button {
   font-size: 0.85rem;
   line-height: 1.6;
   max-width: 96ch;
-  text-align: left;
+  text-align: justify;
+  /* Justification without hyphenation opens rivers of whitespace at this
+     measure, so let the browser break long words. */
+  hyphens: auto;
 }
 .figure figcaption strong {
   color: var(--ink-soft);
